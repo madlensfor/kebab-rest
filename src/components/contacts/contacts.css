@@ -1,19 +1,17 @@
-/* Contacts.module.css */
-.contacts {
+.contacts-section {
     max-width: 1100px;
     margin: auto;
     padding: 4rem 0;
     background: #ffff;
-     /* #f9f5f2; */
 }
 
-.container {
+.contacts-section__container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-.title {
+.contacts-section__title {
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
@@ -22,43 +20,42 @@
     font-family: 'CormorantGaramond';
 }
 
-.wrapper {
+.contacts-section__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-.info {
+.contacts-section__info {
     background: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.item {
+.contacts-section__info-block {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
 }
 
-.icon {
+.contacts-section__icon {
     color: #df7e3d;
-     /* #e74c3c; */
     font-size: 1.5rem;
     margin-top: 0.3rem;
 }
 
-.item h3 {
+.contacts-section__info-block h3 {
     color: #2d3436;
     margin-bottom: 0.5rem;
 }
 
-.item p {
+.contacts-section__info-block p {
     color: #636e72;
     line-height: 1.6;
 }
 
-.social {
+.contacts-section__social {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
@@ -74,7 +71,7 @@
     color: #df7e3d;
 }
 
-.map {
+.contacts-section__map {
     height: 400px;
     border-radius: 10px;
     overflow: hidden;
@@ -82,11 +79,11 @@
 }
 
 @media (max-width: 768px) {
-    .wrapper {
+    .contacts-section__wrapper {
         grid-template-columns: 1fr;
     }
 
-    .map {
+    .contacts-section__map {
         height: 300px;
         display: none;
     }

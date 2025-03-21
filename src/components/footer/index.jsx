@@ -22,7 +22,7 @@ export const Footer = () => {
         <div className="footer_linked-list">
           <ul>
             <h5>Telefon</h5>
-            <li><a href="#"><FaPhone className="icon-footer" /> +41 (178) 808-23-23</a></li>
+            <li><a href="tel:+41788082323"><FaPhone className="icon-footer" /> +41 (178) 808-23-23</a></li>
           </ul>
           <ul>
             <h5>Adresse</h5>
@@ -31,8 +31,8 @@ export const Footer = () => {
           </ul>
           <ul>
             <h5>Follow Us via</h5>
-            <li><a href="#" className="footer-social"><FaInstagram className="footer-socialIcon" /> instagram</a></li>
-            <li><a href="#" className="footer-social"><FaFacebook className="footer-socialIcon" /> facebook</a></li>
+            <li><a href="https://www.instagram.com/palu_steakkebab?igsh=MWlvMGNkeDVhOXhiMw==" className="footer-social" target="_blank" rel="noreferrer"><FaInstagram className="footer-socialIcon" />instagram</a></li>
+            <li><a href="#" className="footer-social"><FaFacebook className="footer-socialIcon" />facebook</a></li>
           </ul>
         </div>
       </div>
