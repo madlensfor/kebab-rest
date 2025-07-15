@@ -1,6 +1,6 @@
 .intro-section {
     background: 
-    linear-gradient(rgba(20, 18, 17, 0.804), rgba(42, 42, 40, 0.596)),
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(38, 38, 34, 0.6)),
         url('../../assets/rest-bg.jpg');
     background-position: center 30%;
     background-size: cover;
@@ -19,7 +19,77 @@
     position: relative;
 }
 
-.intro-section__rest-name {
+.intro-logo {
+    font-size: 2.2rem;
+    color: #FFD700;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.intro-section-nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-section-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.intro-section__nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-btn {
+    background: #FFD700;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 217, 0, 0.20);
+}
+
+.nav-btn a {
+    color: #3f4b44;
+}
+
+.nav-links button {
+    padding: 0 10px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links button:hover {
+    color: #FFD700;
+}
+
+.nav-links button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.nav-links button:hover::after {
+    width: 100%;
+}
+
+.intro-section__text {
     font-family: "CormorantGaramond";
     font-weight: 700;
     font-size: 6rem;
@@ -29,21 +99,7 @@
     z-index: 1;
 }
 
-.gradient-text {
-    color: #ffff;
-    /* background-image: linear-gradient(90deg, #ad817c, #df7e3d,#df7e3d);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    display: inline-block; */
-}
-
-.intro-subtext {
-    width: fit-content;
-    text-align: center;
-    font-family: 'Delius', serif;;
-    font-weight: 700;
+.intro__animated-icon {
     font-size: 3rem;
     color: #FFD700;
     position: absolute;
@@ -52,7 +108,7 @@
     transform: rotate(-10deg);
 }
 
-.intro-subtext {
+.intro__animated-icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,72 +133,155 @@
     }
 }
 
-.intro-subtext::after {
+.intro__animated-icon::after {
     content: "";
     position: absolute;
     top: -80px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle, rgba(255, 165, 0, 0.4) 1%, transparent 40%);
+    background: radial-gradient(circle, rgba(255, 217, 0, 0.488) 1%, transparent 40%);
     mix-blend-mode: screen;
 }
 
-.intro-section-nav {
-    max-width: 1200px;
-    margin: auto;
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.intro-section-nav-container {
+.burger-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.intro-section__nav-links {
-    display: flex;
-    gap: 35px;
-}
-
-.nav-btn {
-    background: rgb(63, 75, 68);
-    border-radius: 15px;
-    padding: 10px 20px;
-    color: #FFD700;
-}
-
-.nav-links>button {
-    padding: 0 10px;
-    color: #ffffff;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
     font-size: 1.5rem;
 }
 
-.nav-links>button:hover {
-    color: #FFD700;
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: right 0.4s ease-in-out;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
+.mobile-menu.open {
+    right: 0px;
+}
 
-@media (max-width: 768px) {
-    .nav-links>button {
-        font-size: 0.8rem;
+.mobile-menu-content {
+    padding: 80px 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 25px;
+}
+
+.mobile-nav-links button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.mobile-nav-links button:hover {
+    border-left: 3px solid #FFD700;
+    padding-left: 15px;
+}
+
+.mobile-nav-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.mobile-nav-btn:hover {
+    transform: translateY(-3px);
+}
+
+.mobile-menu::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.mobile-menu.open::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
     }
 
-    .intro-section__rest-name {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.open .mobile-nav-links li {
+    animation: slideIn 0.5s ease forwards;
+}
+
+.mobile-menu.open .mobile-nav-links li:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.mobile-menu.open .mobile-nav-links li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.mobile-menu.open .mobile-nav-links li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@media (max-width: 768px) {
+    .intro-logo {
+        font-size: 1.2rem;
+    }
+
+    .intro-section__text {
         font-size: 5rem;
     }
 
-    .intro-subtext {
+    .intro__animated-icon {
         font-size: 1rem;
         animation: none;
         left: 60%;
     }
 
-    .intro-subtext::after {
-        top: -80px;
+    .intro__animated-icon::after {
+        top: -40px;
         opacity: 0.5;
     }
 }

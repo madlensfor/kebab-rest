@@ -2,13 +2,12 @@ import { FaCarOn } from 'react-icons/fa6';
 import './contacts.css';
 import { FaMapMarkerAlt, FaPhone, FaClock, FaInstagram } from 'react-icons/fa';
 
-                {/* FaCarSide FaCarAlt */}
-                {/* <FaCarOn className="footer-icon" /> */}
 export const Contacts = () => {
   return (
     <section className="contacts-section" id="contacts">
       <div className="contacts-container">
         <h2 className="contacts-section__title">So finden Sie uns</h2>
+        <div className="contacts-divider"></div>
       
         <div className="contacts-section__wrapper">
           <div className="contacts-section__info">
@@ -26,7 +25,6 @@ export const Contacts = () => {
               <div>
                 <h3>Telefon</h3>
                 <p><a href="tel:+41788082323">+41 (178) 808-23-23</a></p>
-                {/* <p>Besuchen Sie uns und probieren Sie den leckersten Kebab Zürichs</p> */}
               </div>
             </div>
 

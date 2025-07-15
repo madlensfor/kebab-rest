@@ -1,32 +1,6 @@
 import './about.css';
 
-// export const About = () => {
-//     return (
-//       <div className='about-cntainer'>
-//         <div className='about-box'>
-//           <div className="about_card-pic"></div>
-//           <div className="about_card-text">
-//             <h2 className='about_card-title'>Mit Liebe und Sorgfalt zubereitet</h2>
-
-//             <p className='about_card-p'>In unserer Küche steckt mehr als nur gutes Essen – <br /> hier fließt Leidenschaft in jedes Gericht. 
-//               Wir wählen unsere Zutaten mit größter Sorgfalt aus und achten darauf, dass sie immer frisch und hochwertig sind. <br />
-//               Jeder Kebab, jede Sauce und jedes Gericht wird mit Liebe zubereitet, genau so, wie wir es für unsere eigene Familie tun würden.
-//             </p>
-//             <p className='about_card-p'>
-//               Unser Ziel ist es, nicht nur den Hunger zu stillen, sondern euch ein echtes Geschmackserlebnis zu bieten – saftig, 
-//               aromatisch und einfach köstlich. Denn gutes Essen entsteht nicht nur aus den besten Zutaten, sondern auch aus der 
-//               Liebe und Hingabe, mit der es gemacht wird.
-//             </p>
-//             <p className='about_card-p'>Komm vorbei und erlebe es selbst!</p>
-            
-//           </div>
-//         </div>
-//       </div>
-//     );
-// };
-
-
-import { FaAward, FaUtensils, FaSeedling } from 'react-icons/fa';
+import { FaAward, FaSeedling } from 'react-icons/fa';
 
 export const AboutSection = () => {
   return (
@@ -35,13 +9,11 @@ export const AboutSection = () => {
         <div className="about-grid">
           <div className="about-image">
             <div className="about_card-pic chef-photo"></div>
-            {/* <img src="/chef.jpg" alt="Шеф-повар кебабной" className="chef-photo" /> */}
-            {/* <div className="decoration-circle"></div> */}
           </div>
           
           <div className="about-content">
             <h2>Über uns</h2>
-            <div className="divider"></div>
+            <div className="about-divider"></div>
             
             <p>
               Willkommen bei <span className="highlight">Palu Kebab</span>, 
@@ -49,9 +21,10 @@ export const AboutSection = () => {
             </p>
             
             <p>
-              Мы открылись в 2010 году с миссией познакомить Женеву с настоящим вкусом Востока. Каждое блюдо мы 
-              готовим с любовью, используя только свежие местные ингредиенты и оригинальные специи, привезенные 
-              прямо из Турции.
+              Wir haben 2024 mit dem Ziel eröffnet, der Schweiz den echten Geschmack 
+              des Orients näherzubringen. Jedes Gericht wird mit viel Liebe zubereitet, 
+              wobei wir ausschließlich frische Zutaten aus der Region und originale Gewürze verwenden, 
+              die direkt aus der Türkei importiert werden.
             </p>
             <div className="features">
               <div className="feature">

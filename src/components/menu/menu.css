@@ -1,3 +1,31 @@
+.menu-sec-tbox {
+  max-width: fit-content;
+  margin: auto;
+  margin-bottom: 25px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+}
+
+.menu-title {
+  font-size: 2.8rem;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+}
+
+.menu-divider {
+  margin: auto;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #FFD700, #e6ff9a);
+  border-radius: 2px;
+}
+
 .menu-cards {
   max-width: 1300px;
   padding: 0 20px;
@@ -9,7 +37,6 @@
 
 .menu-glass-card {
   background: rgba(255, 255, 255, 0.1);
-/* background: rgba(105, 105, 105, 0.1); */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
@@ -57,6 +84,11 @@
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #FFD700;
 }
 
 .item-info {

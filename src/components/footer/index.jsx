@@ -24,7 +24,6 @@ export const Footer = () => {
             <div className="social-icons">
               <a href="tel:+41788082323" target="_blank" rel="noreferrer" aria-label="Phone"><FaPhone /></a>
               <a href="https://www.instagram.com/palu_steakkebab?igsh=MWlvMGNkeDVhOXhiMw==" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
-              {/* <a href="tel:+41788082323" target="_blank" rel="noreferrer" aria-label="Phone"><FaPhone /></a> */}
             </div>
           </div>
           
@@ -66,10 +65,10 @@ export const Footer = () => {
         
         <div className="footer-bottom">
           <div className="copyright">
-            &copy; {new Date().getFullYear()} Paalu Kebab. All rights reserved.
+            &copy; {new Date().getFullYear()} Palu Kebab. All rights reserved.
           </div>
           <div className="footer-extra">
-            <a href="#privacy">made by</a>
+            <a href="https://github.com/madlensfor" target="_blank" rel="noreferrer">made by madlensfor</a>
           </div>
         </div>
       </div>

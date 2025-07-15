@@ -1,5 +1,4 @@
 export { IntroSection } from "./intro";
-export { Carousel } from "./carousel";
 export { Menu } from "./menu";
 export { Contacts } from "./contacts";
 export { AboutSection } from "./about";
