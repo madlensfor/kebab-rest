@@ -1,12 +1,15 @@
+import { FaCarOn } from 'react-icons/fa6';
 import './contacts.css';
-import { FaMapMarkerAlt, FaPhone, FaClock, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaClock, FaInstagram } from 'react-icons/fa';
 
+                {/* FaCarSide FaCarAlt */}
+                {/* <FaCarOn className="footer-icon" /> */}
 export const Contacts = () => {
   return (
     <section className="contacts-section" id="contacts">
-      <div className="contacts-section__container">
+      <div className="contacts-container">
         <h2 className="contacts-section__title">So finden Sie uns</h2>
-        
+      
         <div className="contacts-section__wrapper">
           <div className="contacts-section__info">
             <div className="contacts-section__info-block">
@@ -37,15 +40,26 @@ export const Contacts = () => {
               </div>
             </div>
 
-            <div className="contacts-section__social">
-              <a href="https://www.instagram.com/palu_steakkebab?igsh=MWlvMGNkeDVhOXhiMw==" target="_blank" rel="noreferrer">
-                <FaInstagram className="socialIcon" />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                <FaFacebook className="socialIcon" />
-              </a>
+            <div className="contacts-section__info-block">
+              <FaCarOn className="contacts-section__icon" />
+              <div>
+                <h3>Lieferung</h3>
+                <p>Wir bieten auch einen Lieferservice nach Hause an, damit du es bequem hast</p>
+              </div>
             </div>
+
+            <div className="contacts-section__info-block">
+              <a href="https://www.instagram.com/palu_steakkebab?igsh=MWlvMGNkeDVhOXhiMw==" target="_blank" rel="noreferrer">
+                <FaInstagram className="contacts-section__icon" />
+              </a>
+              <div>
+                <h3>Follow us via Instagram</h3>
+                <p>Verfolgen Sie unsere Updates</p>
+              </div>
+            </div>
+
           </div>
+
           <div className="contacts-section__map">
             <iframe 
               title="restaurant-location"

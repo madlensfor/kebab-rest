@@ -46,8 +46,8 @@ html {
 }
 
 body {
-    font-family: "Lora";
-    font-weight: 400;
+    /* font-family: "Lora"; */
+    /* font-weight: 400; */
 }
 
 button {
@@ -65,8 +65,12 @@ button {
 }
 
 .section-container {
-    margin: 100px 0;
-    padding: 20px 0;
+    margin: 40px 0;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #FFD700; 
 }
 
 @media (max-width: 768px) {

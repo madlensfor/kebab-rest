@@ -1,55 +1,31 @@
-import { ConfigProvider, Tabs } from 'antd';
-import "./menu.css";
-import { menuData } from '../../mokData';
 
+import './menu.css';
 
-const MenuCategory = ({ items }) => {
-    return (
-      <ul>
-        {items.map((item, index) => (
-          <li key={index} className="menu-item">
-            <div className="item-header">
-              <span className="item-name">{item.name}</span>
-              <span className="item-price">{item.price}</span>
-            </div>
-            {item.descr && <div className="item-description">{item.descr}</div>}
-          </li>
-        ))}
-      </ul>
-    );
-};
-
-export const Menu = () => {
-  const items = menuData.map((section, index) => ({
-    key: String(index + 1),
-    label: section.category,
-    children: <MenuCategory {...section} />,
-  }));
-
+export const Menu = ({ menuData }) => {
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Tabs: {
-            itemSelectedColor: "#df7e3d",
-            itemHoverColor: '#df7e3d',
-            inkBarColor: "#df7e3d",
-            itemActiveColor: '#df7e3d', 
-          }
-        },
-      }}
-  >
-    <div className="menu-container">
-      <h2 className='menu-title'>Menu</h2>
-      <Tabs
-        defaultActiveKey="1"
-        items={items}
-        tabPosition="top"
-        centered
-        className="menu-tabs"
-        destroyInactiveTabPane={false}
-      />
+    <div className="menu-cards">
+      {menuData.map((section, index) => (
+        <div key={index} className="menu-glass-card">
+        <div className="card-header">
+          {section.icon}
+          <h3 className="section-title">{section.title}</h3>
+        </div>
+        
+        <ul className="menu-items">
+          {section.items.map((item, index) => (
+            <li key={index} className="menu-item">
+              <div className="item-info">
+                <span className="item-name">{item.name}</span>
+                <span className="item-dots"></span>
+                <span className="item-price">{item.price} CHF</span>
+              </div>
+              {item.description && <p className="item-description">{item.description}</p>}
+            </li>
+          ))}
+        </ul>
+      </div>
+      ))}
+
     </div>
-  </ConfigProvider>
   );
 };

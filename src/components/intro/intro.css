@@ -1,6 +1,6 @@
 .intro-section {
     background: 
-    linear-gradient(rgba(42, 36, 31, 0.804), rgba(73, 73, 72, 0.596)),
+    linear-gradient(rgba(20, 18, 17, 0.804), rgba(42, 42, 40, 0.596)),
         url('../../assets/rest-bg.jpg');
     background-position: center 30%;
     background-size: cover;
@@ -22,21 +22,21 @@
 .intro-section__rest-name {
     font-family: "CormorantGaramond";
     font-weight: 700;
-    font-size: 15rem;
-    line-height: 0.7;
+    font-size: 6rem;
+    line-height: 1;
     text-align: center;
     color: #ffff;
     z-index: 1;
 }
 
 .gradient-text {
-    color: #ff6b6b;
-    background-image: linear-gradient(90deg, #ad817c, #df7e3d,#df7e3d);
+    color: #ffff;
+    /* background-image: linear-gradient(90deg, #ad817c, #df7e3d,#df7e3d);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    display: inline-block;
+    display: inline-block; */
 }
 
 .intro-subtext {
@@ -45,7 +45,7 @@
     font-family: 'Delius', serif;;
     font-weight: 700;
     font-size: 3rem;
-    color: #df7e3d;
+    color: #FFD700;
     position: absolute;
     bottom: 190px;
     right: 95px;
@@ -56,7 +56,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    animation: orbit 15s linear infinite;
+    animation: orbit 20s linear infinite;
     font-style: italic;
     text-align: center;
     transform-origin: 0 0;
@@ -68,45 +68,61 @@
 @keyframes orbit {
     from {
         transform:
-            rotate(0deg) translateX(160px) rotate(0deg);
+            rotate(0deg) translateX(120px) rotate(0deg);
     }
 
     to {
         transform:
-            rotate(360deg) translateX(160px) rotate(-360deg);
+            rotate(360deg) translateX(120px) rotate(-360deg);
     }
 }
 
 .intro-subtext::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: -80px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle, rgba(255, 165, 0, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 165, 0, 0.4) 1%, transparent 40%);
     mix-blend-mode: screen;
 }
-
 
 .intro-section-nav {
     max-width: 1200px;
     margin: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-section-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .intro-section__nav-links {
     display: flex;
-    justify-content: space-between;
+    gap: 35px;
+}
+
+.nav-btn {
+    background: rgb(63, 75, 68);
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #FFD700;
 }
 
 .nav-links>button {
     padding: 0 10px;
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .nav-links>button:hover {
-    color: #df7e3d;
+    color: #FFD700;
 }
 
 

@@ -1,77 +1,112 @@
-.menu-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 10px;
-    
+.menu-cards {
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
 }
 
-.menu-title {
-    font-family: "CormorantGaramond", serif;
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    color: #df7e3d;
-    margin-bottom: 20px;
+.menu-glass-card {
+  background: rgba(255, 255, 255, 0.1);
+/* background: rgba(105, 105, 105, 0.1); */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.menu-tabs .ant-tabs-nav {
-    margin-bottom: 30px;
+.menu-glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.menu-tabs .ant-tabs-tab {
-    padding: 12px 0px;
-    font-size: 1.7rem;
-    color: #2d2d2d;
-    font-weight: 500;
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 0 0 0 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-item {
-    margin-bottom: 15px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.238);
+  padding-bottom: 14px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
-.item-header {
-    display: flex;
-    justify-content: space-between;
-    font-family: "Lora";
-    font-weight: 600;
-    font-size: 1.3rem;
+.menu-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
 }
 
 .item-name {
-    color: #222;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #fff;
+  flex-grow: 1;
+}
+
+.item-dots {
+  flex-grow: 1;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+  margin: 0 10px;
+  height: 1px;
 }
 
 .item-price {
-    color: #df7e3d;
+  font-weight: 600;
+  color: #FFD700;
+  font-size: 1.2rem;
 }
 
 .item-description {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  line-height: 1;
+  font-style: italic; 
 }
 
 @media (max-width: 768px) {
-    .menu-tabs .ant-tabs-nav-wrap {
-        overflow-x: auto;
-    }
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .menu-tabs .ant-tabs-tab {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
+  .menu-cards {
+    gap: 5px;
+  }
 
-    .item-header {
-        font-size: 1rem;
-    }
+  .menu-glass-card {
+    margin-bottom: 0px;
+  }
 
-    .item-description {
-        font-size: 0.8rem;
-    }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 }
