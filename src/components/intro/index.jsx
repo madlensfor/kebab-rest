@@ -76,8 +76,9 @@ export const IntroSection = () => {
             <div className='intro-section__container'>
                 
                 <h1 className='intro-section__text'>Feuer<br /> Fleisch <br /> Genuss!</h1>
-                <p className='intro__animated-icon'>
-                <Lottie animationData={animationData} loop /></p>
+                <div className='intro__animated-icon'>
+                    <Lottie animationData={animationData} loop />
+                </div>
             </div>
         </div>
     );

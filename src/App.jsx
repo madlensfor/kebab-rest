@@ -1,16 +1,19 @@
 import './App.css';
 
 import { menuDataa } from './mokData';
-import { IntroSection, Menu, 
-         Contacts, AboutSection, Footer, 
-         BackgroundPattern } from './components';
+import { 
+  IntroSection, Menu, 
+  Contacts, AboutSection, Footer, 
+  BackgroundPattern 
+} from './components';
 
 function App() {
   return (
     <main className='main'>
       <BackgroundPattern/>
-      <IntroSection/>
-
+      
+      <IntroSection />
+      
       <div className='section-container' id='Menu'>
         <Menu menuData={menuDataa} />
       </div>
